@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DataGrid AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat=C}" />
+            </DataGrid.Columns>
+            <DataGrid.Items>
+                <local:Product Id="1" Name="Laptop" Price="999.99" />
+                <local:Product Id="2" Name="Smartphone" Price="499.99" />
+                <local:Product Id="3" Name="Tablet" Price="299.99" />
+            </DataGrid.Items>
+        </DataGrid>
     </Grid>
 </Window>
